@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+
+
+}
+.container {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.button1, .button2,.button3,.button4,.button5,
+.button6,.button7,.button8,.button9,.button10,.button11{
+  position: relative;
+  padding: 10px 20px;
+  background-color: #161853;
+  color:white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 10px;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 0.5s;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.button1::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 100%;
+  height: 100%;
+  transform: skewX(320deg)  translateX(200px);
+  transition: all .8s;
+  z-index: -1
+
+}
+
+.button1:hover::before{
+  transform: skewX(300deg) translateX(-200px);
+
+}
+
+
+.button2::before{
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255,255,255, 0.1);
+  transition: all .7s;
+  clip-path: circle(0% at 50% center);
+  z-index: -1
+
+
+
+}
+
+.button2:hover::before{
+  clip-path: circle(100% at 50% center);
+
+}
+
+.button3::before{
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255,255,255, 0.1);
+  transition: all .5s;
+clip-path: circle(0% at 100% 0);
+z-index: -1
+
+
+}
+
+.button3:hover::before{
+  clip-path: circle(100% at 50% center);
+
+}
+
+.button4::before{
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 0%;
+  transition: all .5s;
+  border-bottom: 2px solid white;
+  z-index: -1
+
+
+}
+
+.button4:hover::before{
+
+  width: 90%;
+
+}
+
+.button4::after{
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 0%;
+  transition: all .5s;
+  transition-delay: 0.1s;
+  border-bottom: 2px solid white;
+  z-index: -1
+
+
+}
+
+.button4:hover::after{
+
+  width: 90%;
+
+}
+
+.button5::before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent white transparent transparent;
+  z-index: -1;
+  margin-top: -5px;
+  transition: all 0.6s
+
+
+}
+.button5::after{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent white;
+  z-index: -1;
+  margin-top: -5px;
+  transition: all 0.6s
+
+}
+
+.button5:hover::before{
+
+  right: 100%;
+
+}
+.button5:hover::after{
+
+  left: 100%;
+
+}
+
+.button5:hover{
+
+  background-color: #F0A500;
+
+}
+
+
+.button6::before{
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  bottom: -20px;
+  left: 50%;
+  z-index: -1;
+  transition: all 0.5s;
+  background-color: #420516;
+  clip-path: polygon(50% 0%, 100% 50%, 0 50%);
+  margin-left: -10px;
+
+}
+
+.button6:hover::before{
+  transform: scale(11);
+}
+
+
+.button7::before{
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  top: 0px;
+  left: 0;
+  z-index: -1;
+  transition: all 0.5s;
+  background-color: #BD1616;
+  clip-path: polygon(0% 0%, 100% 0, 0 50%, 100% 100%, 0% 100%);
+
+}
+
+.button7:hover::before{
+    width: 100%;
+  clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
+
+}
+
+
+.button8::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0;
+  z-index: -1;
+  transition: all 0.5s;
+  background-color: #FF67E7;
+  clip-path: inset(50% 50%);
+
+}
+
+.button8:hover::before{
+    clip-path: inset(0%);
+}
+
+
+.button9{
+  width: 100px;
+  height: 40px;
+}
+
+
+.button9::before{
+  content: attr(button-content);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+  transition: all 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button9:hover::before{
+  transform: translateY(-50px);
+}
+
+.button9::after{
+  content: attr(button-content);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+  transition: all 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(50px);
+
+}
+
+.button9:hover::after{
+  transform: translateY(0px);
+
+}
+
+
+
+.button10::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+  transition: all 0.5s;
+  background-color: #C85C5C;
+  transform: skew(540deg);
+}
+
+.button10:hover::after{
+transform: skew(630deg);
+
+}
+
+.button11::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.8s;
+  background-color: #C85C5C;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  transform:  scale(0);
+
+
+
+}
+
+.button11:hover::before{
+
+  transform:  scale(5);
+
+}
+
+
+
+
+
+/* background Color Of Buttons*/
+a:nth-child(1){
+  background-color: #66806A
+}
+a:nth-child(2){
+  background-color: #CD1818
+}
+
+a:nth-child(3){
+  background-color: #396EB0
+}
+
+a:nth-child(4){
+  background-color: #FFAB4C
+}
+
+a:nth-child(5){
+  background-color: #082032
+}
+
+a:nth-child(6){
+  background-color: #7D1935
+}
+
+a:nth-child(7){
+  background-color: #FF2626
+}
+a:nth-child(8){
+  background-color: #C400FF
+}
+
+a:nth-child(9){
+  background-color: #FF3F00
+}
+
+a:nth-child(10){
+  background-color: #FBD148
+}
+a:nth-child(11){
+  background-color: #FBD
+}

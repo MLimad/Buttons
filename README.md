@@ -1,3 +1,3 @@
 # Buttons
  Styled Buttons Wtih Beautiful Transition\
-![logo](result.png)
+![logo](result.jpg)
